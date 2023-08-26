@@ -35,7 +35,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -43,6 +43,12 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Make images easier to work with */
@@ -78,28 +84,25 @@ select {
 
 /* ******************* */
 
-
 /* CSS VARIABLES */
 
 :root {
   --primary-color-1: hsl(257, 40%, 49%);
   --primary-color-2: hsl(300, 69%, 71%);
 
-  --ff-headings: 'Poppins', sans-serif;
-  --ff-body: 'Open Sans', sans-serif;
+  --ff-headings: "Poppins", sans-serif;
+  --ff-body: "Open Sans", sans-serif;
 
   --fw-600: 600;
 }
 
 /* ******************* */
 
-
 body {
-  background-image: url('./images/bg-mobile.svg');
+  background-image: url("./images/bg-mobile.svg");
   background-repeat: no-repeat;
   background-color: var(--primary-color-1);
 }
-
 
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
@@ -111,7 +114,6 @@ body {
   width: 1px;
 }
 
-
 .huddle-introductory__header {
   padding-inline: 2rem;
   margin-block-start: 2rem;
@@ -120,7 +122,6 @@ body {
 
 .huddle-introductory__logo {
   width: 8rem;
-
 }
 
 .huddle-introductory__main {
@@ -146,4 +147,48 @@ body {
   font-family: var(--ff-body);
   margin-block: 1rem;
   color: #ededed;
+  padding-inline: 0.25rem;
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+}
+
+.huddle-introductory__btn {
+  background-color: #ededed;
+  font-family: var(--ff-headings);
+  font-size: 0.8rem;
+  padding-block: 0.75em;
+  border-radius: 100px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding-inline: 6em;
+  display: inline-block;
+  margin-block-start: 0.5rem;
+}
+
+.huddle-introductory__footer {
+  margin-block-start: 3rem;
+  margin-block-end: 3rem;
+}
+
+.huddle-introductory__footer--nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.huddle-introductory__footer--nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ededed;
+  border-radius: 100px;
+  padding: 0.5rem;
+}
+
+.huddle-introductory__footer--nav-link svg {
+  fill: #ededed;
+  width: 1rem;
 }

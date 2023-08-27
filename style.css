@@ -126,7 +126,6 @@ body {
 
 .huddle-introductory__main {
   padding-inline: 2rem;
-  /* max-width: 40rem; */
   margin-inline: auto;
   display: flex;
   flex-direction: column;
@@ -167,6 +166,20 @@ body {
   padding-inline: 6em;
   display: inline-block;
   margin-block-start: 0.5rem;
+  color: var(--primary-color-1);
+}
+
+.huddle-introductory__btn:link,
+.huddle-introductory__btn:visited,
+.huddle-introductory__btn:active {
+  background-color: #ededed;
+  color: var(--primary-color-1);
+  transition: all 0.2s ease-out;
+}
+
+.huddle-introductory__btn:hover {
+  background-color: var(--primary-color-2);
+  color: #ededed;
 }
 
 .huddle-introductory__footer {
@@ -182,21 +195,42 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .huddle-introductory__footer--nav-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #ededed;
   border-radius: 100px;
   padding: 0.5rem;
+}
+
+.huddle-introductory__footer--nav-link:link,
+.huddle-introductory__footer--nav-link:visited,
+.huddle-introductory__footer--nav-link:active {
+  border: 1px solid #ededed;
+  transition: border 0.2s ease-out;
 }
 
 .huddle-introductory__footer--nav-link svg {
   fill: #ededed;
   width: 1rem;
+  transition: fill 0.2s ease-out;
+}
+
+.huddle-introductory__footer--nav-link:link svg,
+.huddle-introductory__footer--nav-link:visited svg,
+.huddle-introductory__footer--nav-link:active svg {
+  fill: #ededed;
+}
+
+.huddle-introductory__footer--nav-link:hover {
+  border: 1px solid var(--primary-color-2);
+}
+
+.huddle-introductory__footer--nav-link:hover svg {
+  fill: var(--primary-color-2);
 }
 
 @media screen and (min-width: 48rem) {
@@ -211,19 +245,82 @@ body {
     background-size: cover;
     background-position: center;
     min-height: 100vh;
+    overflow: hidden;
+  }
+
+  .huddle-introductory__header {
+    margin-block-end: 5rem;
   }
 
   .huddle-introductory__main {
     flex-direction: row;
-    justify-content: center;
+    gap: 2rem;
+  }
+
+  .huddle-introductory__column--1 {
+    width: 80rem;
   }
 
   .huddle-introductory__column--2 {
     text-align: start;
+    margin-block-start: 3rem;
+  }
+
+  .huddle-introductory__heading--2 {
+    font-size: 2rem;
+  }
+
+  .huddle-introductory__text {
+    font-size: 0.85rem;
+  }
+
+  .huddle-introductory__btn {
+    padding-inline: 4em;
   }
 
   .huddle-introductory__footer {
     align-items: flex-end;
     justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 90rem) {
+  .huddle-introductory__header {
+    padding-inline-start: 8rem;
+    margin-block-start: 3rem;
+  }
+
+  .huddle-introductory__logo {
+    width: 10rem;
+  }
+
+  .huddle-introductory__main {
+    gap: 5rem;
+    padding-inline: 8rem;
+  }
+
+  .huddle-introductory__column--1 {
+    margin-block-end: auto;
+    width: auto;
+  }
+
+  .huddle-introductory__column--1 img {
+    width: 50rem;
+  }
+
+  .huddle-introductory__column--2 {
+    width: 30rem;
+  }
+
+  .huddle-introductory__heading--2 {
+    font-size: 2.5rem;
+  }
+
+  .huddle-introductory__text {
+    font-size: 1rem;
+  }
+
+  .huddle-introductory__footer {
+    padding-inline-end: 5rem;
   }
 }

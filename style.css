@@ -242,14 +242,9 @@ body {
 @media screen and (min-width: 64rem) {
   body {
     background-image: url(./images/bg-desktop.svg);
-    background-size: cover;
-    background-position: center;
     min-height: 100vh;
+    background-size: contain;
     overflow: hidden;
-  }
-
-  .huddle-introductory__header {
-    margin-block-end: 5rem;
   }
 
   .huddle-introductory__main {
@@ -257,13 +252,19 @@ body {
     gap: 2rem;
   }
 
-  .huddle-introductory__column--1 {
-    width: 80rem;
-  }
-
   .huddle-introductory__column--2 {
     text-align: start;
+    max-width: 30rem;
+    margin-block-start: 2rem;
+  }
+
+  .huddle-introductory__footer {
+    justify-content: flex-end;
+  }
+
+  .huddle-introductory__header {
     margin-block-start: 3rem;
+    margin-block-end: 5rem;
   }
 
   .huddle-introductory__heading--2 {
@@ -277,39 +278,30 @@ body {
   .huddle-introductory__btn {
     padding-inline: 4em;
   }
-
-  .huddle-introductory__footer {
-    align-items: flex-end;
-    justify-content: flex-end;
-  }
 }
 
 @media screen and (min-width: 90rem) {
   .huddle-introductory__header {
-    padding-inline-start: 8rem;
-    margin-block-start: 3rem;
+    width: 90%;
+    margin-inline: auto;
   }
 
   .huddle-introductory__logo {
-    width: 10rem;
+    width: auto;
   }
 
   .huddle-introductory__main {
     gap: 5rem;
-    padding-inline: 8rem;
+    width: 90%;
+    margin-inline: auto;
   }
 
   .huddle-introductory__column--1 {
     margin-block-end: auto;
-    width: auto;
   }
 
   .huddle-introductory__column--1 img {
     width: 50rem;
-  }
-
-  .huddle-introductory__column--2 {
-    width: 30rem;
   }
 
   .huddle-introductory__heading--2 {
@@ -321,6 +313,7 @@ body {
   }
 
   .huddle-introductory__footer {
+    margin-block-start: auto;
     padding-inline-end: 5rem;
   }
 }
